@@ -1,0 +1,38 @@
+.section__buttonsContainer {
+    padding: 0 20px 20px;
+}
+
+@media (max-width: 750px) {
+    .section__buttonsContainer {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .section__buttonsContainer {
+        margin: 0 auto;
+        display: grid;
+    }
+}
+
+.section__button {
+    background-color: transparent;
+    color: teal;
+    border: none;
+    font-size: 18px;
+    padding-left: 20px;
+    transition: 1s;
+}
+
+@media (max-width: 750px) {
+    .section__button {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.section__button:hover {
+    cursor: pointer;
+    color: hsl(180, 100%, 35%);
+    scale: 1.1;
+}

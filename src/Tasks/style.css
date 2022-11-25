@@ -1,0 +1,44 @@
+.section__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list__item {
+    word-break: break-word;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    margin-top: 20px;
+    border-bottom: solid 2px #ddd;
+    padding-bottom: 20px;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__item--hidden {
+    display: none;
+}
+
+.list__taskContent {
+    padding-top: 5px;
+}
+
+.list__button {
+    border: none;
+    /* width: 30px; */
+    height: 30px;
+    padding: 5px;
+}
+
+.list__button--checking {
+    background-color: green;
+    color: white;
+    margin: 0 20px;
+}
+
+.list__button--deleting {
+    background-color: red;
+    color: white;
+    margin: 0 20px;
+}

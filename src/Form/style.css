@@ -1,0 +1,43 @@
+.section__form {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 140px;
+}
+
+@media (max-width: 750px) {
+    .section__form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__input {
+    padding: 7px;
+    margin: 0 20px;
+    border: 2px solid #ddd;
+}
+
+.form__button {
+    padding: 7px;
+    margin-right: 20px;
+    background-color: teal;
+    color: white;
+    border: none;
+    transition: 1s;
+}
+
+.form__button:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: hsl(180, 100%, 35%);
+}
+
+@media (max-width: 750px) {
+    .form__button {
+        margin: 20px 20px 0;
+    }
+
+    .form__button:hover {
+        scale: 1.05;
+    }
+}
