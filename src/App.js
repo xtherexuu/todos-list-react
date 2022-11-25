@@ -17,7 +17,7 @@ function App() {
         <Wrapper>
           <Header title="Lista zadań" />
           <Section title="Dodaj nowe zadanie" body={<Form />} />
-          <Section title="Lista zadań" extraContent={<Buttons />} body={<Tasks tasks={tasks} hiddenTaskStatus={hiddenTaskStatus}/>}/>
+          <Section title="Lista zadań" extraContent={<Buttons tasks={tasks} />} body={<Tasks tasks={tasks} hiddenTaskStatus={hiddenTaskStatus}/>}/>
         </Wrapper>
     );
 }
