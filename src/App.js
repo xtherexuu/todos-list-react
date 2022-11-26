@@ -6,18 +6,22 @@ import Buttons from "./Buttons";
 import Tasks from "./Tasks";
 
 const tasks = [
-  {id: 1, task: "Pozmywać naczynia", done: true},
-  {id: 2, task: "Posprzątać pokój", done: false},
-]
+    { id: 1, task: "Pozmywać naczynia", done: true },
+    { id: 2, task: "Posprzątać pokój", done: false },
+];
 
 const hiddenTaskStatus = false;
 
 function App() {
     return (
         <Wrapper>
-          <Header title="Lista zadań" />
-          <Section title="Dodaj nowe zadanie" body={<Form />} />
-          <Section title="Lista zadań" extraContent={<Buttons tasks={tasks} />} body={<Tasks tasks={tasks} hiddenTaskStatus={hiddenTaskStatus}/>}/>
+            <Header title="Lista zadań" />
+            <Section title="Dodaj nowe zadanie" body={<Form />} />
+            <Section 
+              title="Lista zadań" 
+              extraContent={<Buttons tasks={tasks} />} 
+              body={<Tasks tasks={tasks} hiddenTaskStatus={hiddenTaskStatus} />} 
+            />
         </Wrapper>
     );
 }
