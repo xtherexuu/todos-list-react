@@ -6,6 +6,14 @@ This is my simple task list with react, without interactions yet.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Preview
+
+![A photo of application view](./preview.png)
+
+## Demo
+
+- https://xtherexuu.github.io/todos-list-react
+
 ## Technologies
 
 - HTML
