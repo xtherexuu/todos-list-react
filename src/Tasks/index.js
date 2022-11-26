@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 const Tasks = (props) => (
-    <ul className="section__list">
+    <ul className="list">
         {props.tasks.map((task) => (
             <li key={task.id} className={`list__item ${task.done && props.hiddenTaskStatus ? "list__item--hidden" : ""}`}>
                 <button className="list__button list__button--checking">{task.done ? "✔" : ""}</button>

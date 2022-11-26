@@ -1,29 +1,29 @@
-.section__buttonsContainer {
+.buttonsContainer {
     padding: 0 20px 20px;
 }
 
 @media (max-width: 750px) {
-    .section__buttonsContainer {
+    .buttonsContainer {
         padding-bottom: 0;
     }
 }
 
 @media (max-width: 750px) {
-    .section__buttonsContainer {
+    .buttonsContainer {
         margin: 0 auto;
         display: grid;
     }
 }
 
-.section__button:disabled {
+.buttons__button:disabled {
     color: #ddd;
 }
 
-.section__button:hover:disabled {
+.buttons__button:hover:disabled {
     color: #ddd;
 }
 
-.section__button {
+.buttons__button {
     background-color: transparent;
     color: teal;
     border: none;
@@ -33,13 +33,13 @@
 }
 
 @media (max-width: 750px) {
-    .section__button {
+    .buttons__button {
         padding: 0;
         margin-bottom: 20px;
     }
 }
 
-.section__button:hover {
+.buttons__button:hover {
     cursor: pointer;
     color: hsl(180, 100%, 35%);
     scale: 1.1;
