@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Wrapper = (props) => (
+const Wrapper = ({children}) => (
     <div className="wrapper">
-        {props.children}
+        {children}
     </div>
 )
 
