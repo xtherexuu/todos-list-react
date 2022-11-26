@@ -15,6 +15,10 @@
     }
 }
 
+.buttonsContainer--hidden {
+    display: none;
+}
+
 .buttons__button:disabled {
     color: #ddd;
 }
