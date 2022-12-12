@@ -19,7 +19,22 @@ function App() {
     };
 
     const removeTask = (id) => {
-        setTasks((tasks) => (tasks = [...tasks.slice(0, id - 1), ...tasks.slice(id)]));
+        setTasks((tasks) => tasks.filter((task) => task.id !== id));
+    };
+
+    const toggleTaskDone = (id) => {
+        setTasks((tasks) =>
+            tasks.map((task) => {
+                if (task.id === id) {
+                    return {
+                        ...task,
+                        done: !task.done,
+                    };
+                } else {
+                    return task;
+                }
+            })
+        );
     };
 
     return (
@@ -35,7 +50,14 @@ function App() {
                         toggleHiddenTaskStatus={toggleHiddenTaskStatus}
                     />
                 }
-                body={<Tasks tasks={tasks} hiddenTaskStatus={hiddenTaskStatus} removeTask={removeTask} />}
+                body={
+                    <Tasks
+                        tasks={tasks}
+                        hiddenTaskStatus={hiddenTaskStatus}
+                        removeTask={removeTask}
+                        toggleTaskDone={toggleTaskDone}
+                    />
+                }
             />
         </Wrapper>
     );
