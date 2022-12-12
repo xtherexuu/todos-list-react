@@ -37,6 +37,17 @@ function App() {
         );
     };
 
+    const toggleAllTasksDone = () => {
+        setTasks((tasks) =>
+            tasks.map((task) => {
+                return {
+                    ...task,
+                    done: true,
+                };
+            })
+        );
+    };
+
     return (
         <Wrapper>
             <Header title="Lista zadań" />
@@ -48,6 +59,7 @@ function App() {
                         tasks={tasks}
                         hiddenTaskStatus={hiddenTaskStatus}
                         toggleHiddenTaskStatus={toggleHiddenTaskStatus}
+                        toggleAllTasksDone={toggleAllTasksDone}
                     />
                 }
                 body={
