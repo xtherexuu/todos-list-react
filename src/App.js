@@ -9,10 +9,7 @@ import Tasks from "./Tasks";
 function App() {
     const [hiddenTaskStatus, setHiddenTaskStatus] = React.useState(false);
 
-    let [tasks, setTasks] = React.useState([
-        { id: 1, task: "Pozmywać naczynia", done: true },
-        { id: 2, task: "Posprzątać pokój", done: false },
-    ]);
+    let [tasks, setTasks] = React.useState([]);
 
     const toggleHiddenTaskStatus = () => {
         setHiddenTaskStatus((hiddenTaskStatus) => !hiddenTaskStatus);
