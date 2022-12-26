@@ -8,7 +8,7 @@ const Form = ({ addNewTask }) => {
         <form
             onSubmit={(event) => {
                 event.preventDefault();
-                addNewTask(formValue.trim());
+                formValue.trim() && addNewTask(formValue.trim());
                 setFormValue("");
             }}
             className="form"

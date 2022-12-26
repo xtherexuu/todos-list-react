@@ -46,18 +46,14 @@ function App() {
     };
 
     const addNewTask = (task) => {
-        if (!task) {
-            return;
-        } else {
-            setTasks((tasks) => [
-                ...tasks,
-                {
-                    id: !tasks.length ? 1 : tasks[tasks.length - 1].id + 1,
-                    task,
-                    done: false,
-                },
-            ]);
-        }
+        setTasks((tasks) => [
+            ...tasks,
+            {
+                id: !tasks.length ? 1 : tasks[tasks.length - 1].id + 1,
+                task,
+                done: false,
+            },
+        ]);
     };
 
     return (
