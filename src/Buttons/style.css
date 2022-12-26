@@ -46,5 +46,4 @@
 .buttons__button:hover {
     cursor: pointer;
     color: hsl(180, 100%, 35%);
-    scale: 1.1;
 }
