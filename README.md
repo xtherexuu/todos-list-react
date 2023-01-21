@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my simple task list with react, without interactions yet.
+This is my quite simple task list with react, you can add, remove, or toggle done your tasks. All tasks are saving in localStorage, so u can keep it on your device even if you cloce the browser. Enjoy!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
