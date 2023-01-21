@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Wrapper from "./Wrapper";
 import Section from "./Section";
@@ -7,9 +7,17 @@ import Buttons from "./Buttons";
 import Tasks from "./Tasks";
 
 function App() {
-    const [hiddenTaskStatus, setHiddenTaskStatus] = React.useState(false);
+    const [hiddenTaskStatus, setHiddenTaskStatus] = React.useState(() => {
+        if (JSON.parse(localStorage.getItem("hiddenTaskStatus")) === null) {
+            return false;
+        } else {
+            return JSON.parse(localStorage.getItem("hiddenTaskStatus"));
+        }
+    });
 
-    let [tasks, setTasks] = React.useState([]);
+    let [tasks, setTasks] = React.useState(
+        JSON.parse(localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : []
+    );
 
     const toggleHiddenTaskStatus = () => {
         setHiddenTaskStatus((hiddenTaskStatus) => !hiddenTaskStatus);
@@ -55,6 +63,14 @@ function App() {
             },
         ]);
     };
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
+
+    useEffect(() => {
+        localStorage.setItem("hiddenTaskStatus", JSON.stringify(hiddenTaskStatus));
+    }, [hiddenTaskStatus]);
 
     return (
         <Wrapper>
