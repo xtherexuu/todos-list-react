@@ -33,7 +33,7 @@
     border: none;
     font-size: 18px;
     padding-left: 20px;
-    transition: 1s;
+    transition: background-color 1s, .25s;
 }
 
 @media (max-width: 750px) {
