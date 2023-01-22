@@ -6,18 +6,20 @@ import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
 
-function App() {
-    const [hiddenTaskStatus, setHiddenTaskStatus] = React.useState(() => {
-        if (JSON.parse(localStorage.getItem("hiddenTaskStatus")) === null) {
-            return false;
-        } else {
-            return JSON.parse(localStorage.getItem("hiddenTaskStatus"));
-        }
-    });
+const getInitialTasks = () => {
+    const tasksInLocalStorage = JSON.parse(localStorage.getItem("tasks"));
+    return tasksInLocalStorage ? tasksInLocalStorage : [];
+};
 
-    let [tasks, setTasks] = React.useState(
-        JSON.parse(localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : []
-    );
+const getInitialHiddenTaskStatus = () => {
+    const hiddenTaskStatusInLocalStorage = JSON.parse(localStorage.getItem("hiddenTaskStatus"));
+    return hiddenTaskStatusInLocalStorage === null ? false : hiddenTaskStatusInLocalStorage;
+};
+
+function App() {
+    const [hiddenTaskStatus, setHiddenTaskStatus] = React.useState(getInitialHiddenTaskStatus);
+
+    let [tasks, setTasks] = React.useState(getInitialTasks);
 
     const toggleHiddenTaskStatus = () => {
         setHiddenTaskStatus((hiddenTaskStatus) => !hiddenTaskStatus);
